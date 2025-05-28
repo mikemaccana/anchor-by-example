@@ -1,12 +1,12 @@
 ---
-title: On-Chain Voting
-description: A decentralized on-chain voting 
+title: Onchain Voting
+description: A decentralized onchain election 
 ---
 > [Program Code](https://github.com/coral-xyz/anchor-by-example/tree/master/programs/onchain-voting)
 
-In this program, we are going to build a decentralized on-chain voting system on solana. Where users can vote on our favourite `GM` and `GN`. Let's see who will win 🚀.
+In this program, we are going to build a decentralized onchain voting system on Solana, where users can vote on our their preferred greeting - `GM` and `GN` (that's 'good morning' and 'good night' if you're not familiar with crypto memes). Let's see who will win 🚀.
 
-> With the help of this example we are going to learn, how to store and update data in solana accounts.
+> In this example we are going to learn how to store and update data in Solana accounts.
 
 ---
 
@@ -14,8 +14,8 @@ To initialize the project, simply run:
 ```shell
 anchor init onchain-voting
 ```
-## Program's Code
-Let's write our first instruction `init_vote_bank` which let us to store all of our votes in a new account on the Solana blockchain.
+## Program Code
+Let's write our first instruction handler `init_vote_bank` which let us to store all of our votes in a new account on the Solana blockchain.
 ```rust
 use anchor_lang::prelude::*;
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
@@ -50,7 +50,7 @@ pub struct VoteBank {
 }
 ```
 
-Time for our second and most important instruction the `gib_vote`. This instruction accept votes from public a.k.a janta
+Time for our second and most important instruction the `gib_vote`. This instruction will accept votes from the public.
 ```rust
 pub fn gib_vote(ctx: Context<GibVote>, vote_type: VoteType) -> Result<()> {
     // If vote_type is GM increment GM by 1 else increment GN by 1
@@ -85,7 +85,7 @@ Now compile and build this program, by simply running:
 anchor build
 ```
 ## Test
-Now It's time to write a test for our program! Copy-pasta the following code into your `onchain-voting.ts` file in tests folder in the root directory.
+Now It's time to write a test for our program! Copy the following code into your `onchain-voting.ts` file in tests folder in the root directory.
 ```typescript
 import * as anchor from "@project-serum/anchor";
 import { Program } from "@project-serum/anchor";

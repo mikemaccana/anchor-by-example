@@ -147,7 +147,7 @@ We are going to deploy on `devnet`. Here is our deployment checklist 🚀
 5. Run `anchor deploy`
 6. Run `anchor test`
 
-## On-Chain Result
+## Onchain Result
 ```shell
 > Program logged: "Instruction: GibVote"
 > Program logged: "Voted for GM 🤝"

@@ -85,7 +85,8 @@ Now compile and build this program, by simply running:
 anchor build
 ```
 ## Test
-Now It's time to write a test for our program! Copy the following code into your `onchain-voting.ts` file in tests folder in the root directory.
+
+Now it's time to write tests for our program! Copy the following code into your `onchain-voting.ts` file in tests folder in the root directory.
 ```typescript
 import * as anchor from "@project-serum/anchor";
 import { Program } from "@project-serum/anchor";
